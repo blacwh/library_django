@@ -140,3 +140,6 @@ DATABASES['default'].update(db_from_env)
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# correct the static file problem
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
